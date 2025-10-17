@@ -147,7 +147,7 @@ function renderResult() {
     <h2>Quiz Complete 🎉</h2>
     <div class="score">Your Score: ${score} / ${questions.length}</div>
     <button class="btn accent" data-action="restart" id="restart">Restart Quiz</button>
-    <div class="credits">Created by K2S · <a href="https://x.com/k2sbhai" target="_blank" rel="noopener">@k2sbhai</a></div>
+    <div class="credits">Created by k2sbhai· <a href="https://x.com/k2sbhai" target="_blank" rel="noopener">@k2sbhai</a></div>
   `;
 }
 
