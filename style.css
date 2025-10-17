@@ -1,0 +1,103 @@
+/* This file contains the custom CSS extracted from the HTML <style> block.
+The Tailwind theme colors (like g-bg, g-primary) have been replaced with their hex values.
+*/
+
+/* Custom styles for component spacing and visual feedback */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Use the first uploaded image as a subtle background pattern */
+    background-color: #3e2e21; /* Deep Chocolate Brown (g-bg) */
+    background-image: url('uploaded:image_ec240c.png-9711a902-f337-4dbf-8625-27d29fdbce2d');
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+.card {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    /* Backdrop filter for a semi-transparent, modern look */
+    backdrop-filter: blur(8px);
+}
+.quiz p.question {
+    font-size: 1.125rem; /* lg */
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+.options {
+    display: grid;
+    gap: 0.75rem;
+}
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    transition: all 0.2s;
+    font-weight: 500;
+    border: 2px solid #574635;
+    background-color: #6d5b4a; /* Slightly lighter brown for options */
+    color: #f7f3e8; /* Off-white text */
+    cursor: pointer;
+}
+.btn:hover:not(:disabled) {
+    background-color: #8b7968;
+    transform: translateY(-2px);
+}
+/* Feedback States */
+.btn.correct {
+    background-color: #10b981; /* Emerald 500 (g-correct) */
+    border-color: #10b981; /* Emerald 500 (g-correct) */
+    color: #1f2937; 
+    pointer-events: none;
+    animation: pulse-correct 0.3s ease-out;
+}
+.btn.incorrect {
+    background-color: #ef4444; /* Red 500 (g-incorrect) */
+    border-color: #ef4444; /* Red 500 (g-incorrect) */
+    color: white;
+    opacity: 0.7;
+    pointer-events: none;
+}
+.btn:disabled {
+    cursor: default;
+    opacity: 0.9;
+}
+/* Accent Button for Restart */
+.btn.accent {
+    margin-top: 1.5rem;
+    text-align: center;
+    background-color: #7c2d12; /* Darker Brown (g-primary) */
+    border-color: #7c2d12; /* Darker Brown (g-primary) */
+    color: white;
+}
+.btn.accent:hover:not(:disabled) {
+    background-color: #9f3918;
+}
+.explanation-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #3e2e21; /* Deep chocolate */
+    color: #f7f3e8;
+    min-height: 20px;
+}
+.score {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #f7f3e8;
+}
+.credits {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #c9bdae;
+}
+.credits a {
+    color: #a855f7; /* Purple/Accent (g-secondary) */ 
+}
+@keyframes pulse-correct {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
